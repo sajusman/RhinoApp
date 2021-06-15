@@ -2,11 +2,11 @@ package Exposables;
 
 import org.mozilla.javascript.ScriptableObject;
 
-public class Counter extends ScriptableObject {
+public class CounterScriptable extends ScriptableObject {
 
     int count = 0;
 
-    public Counter () { }
+    public CounterScriptable() { }
 
     public void jsConstructor(int a) {
         count = a;

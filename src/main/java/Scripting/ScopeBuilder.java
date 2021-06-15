@@ -1,5 +1,5 @@
 package Scripting;
-import Exposables.Counter;
+import Exposables.CounterScriptable;
 import Exposables.DateScriptable;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
@@ -11,7 +11,7 @@ public class ScopeBuilder{
 
     public static Scriptable build(Context cx) throws InvocationTargetException, IllegalAccessException, InstantiationException {
         Scriptable scope = cx.initStandardObjects();
-        ScriptableObject.defineClass(scope, Counter.class);
+        ScriptableObject.defineClass(scope, CounterScriptable.class);
         ScriptableObject.defineClass(scope, DateScriptable.class);
         return scope;
     }
