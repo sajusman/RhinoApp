@@ -17,8 +17,6 @@ public class ScriptExecutor {
             // This must be done before scripts can be executed. Returns
             // a scope object that we use in later calls.
             Scriptable scope = ScopeBuilder.build(cx);
-            // Collect the arguments into a single string.
-
             // Now evaluate the string we've colected.
             Object result = cx.evaluateString(scope, jsSource, "<cmd>",     2, null);
 

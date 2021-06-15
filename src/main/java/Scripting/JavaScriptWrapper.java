@@ -13,14 +13,13 @@ public class JavaScriptWrapper {
 
     private void importScript(String path){
         try {
-            File myObj = new File(path);
-            Scanner reader = new Scanner(myObj);
+            File file = new File(path);
+            Scanner reader = new Scanner(file);
             while (reader.hasNextLine()) {
                 script.append(reader.nextLine());
             }
             reader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
             e.printStackTrace();
         }
     }
